@@ -172,6 +172,8 @@ input[type="search"]:hover::placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
 
+/*slide*/
+
 .slider {
     position: relative;
     width: 1160px;
@@ -303,5 +305,108 @@ input[type="search"]:hover::placeholder {
 }
 
 #btn-3:checked ~ .slides .slide:nth-child(3) {
+    display: block;
+}
+
+/*product*/
+.product-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.product-item span {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+.product-item a:active {
+    opacity: 0.3;
+}
+
+/*tabs*/
+.tab {
+    position: relative;
+    width: 1160px;
+    min-height: 388px;
+    margin: 0 auto;
+}
+
+.tab input[type=radio] {
+    position:absolute;
+    opacity:0;
+}
+
+.tab-controls {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 284px;
+}
+
+.tab-controls label {
+    z-index: 1000;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.tabs {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 877px;
+}
+
+.tab-text {
+    padding-left: 116px;
+    min-height: 200px;
+    width: 433px;
+    border-left: 7px solid #000000;
+}
+
+.tab-text h3 {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.tab-slide:nth-child(1){
+    background-image: url("../img/delivery.svg");
+    background-repeat: no-repeat;
+    background-position: 90%;
+}
+.tab-slide:nth-child(2){
+    background-image: url("../img/warranty.svg");
+    background-repeat: no-repeat;
+    background-position: 90%;
+}
+.tab-slide:nth-child(3){
+    background-image: url("../img/credit.svg");
+    background-repeat: no-repeat;
+    background-position: 90%;
+}
+
+#tab-1:checked ~ .tab-controls label[for="tab-1"],
+#tab-2:checked ~ .tab-controls label[for="tab-2"],
+#tab-3:checked ~ .tab-controls label[for="tab-3"] {
+    background-color: #c1c1c1;
+}
+
+.tabs .tab-slide {
+    display: none;
+}
+
+#tab-1:checked ~ .tabs .tab-slide:nth-child(1) {
+    display: block;
+}
+#tab-2:checked ~ .tabs .tab-slide:nth-child(2) {
+    display: block;
+}
+#tab-3:checked ~ .tabs .tab-slide:nth-child(3) {
     display: block;
 }
