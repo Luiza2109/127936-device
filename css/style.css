@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.eot');
+    src: url('../fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Light.woff2') format('woff2'),
+        url('../fonts/Gilroy-Light.woff') format('woff'),
+        url('../fonts/Gilroy-Light.ttf') format('truetype'),
+        url('../fonts/Gilroy-Light.svg#Gilroy-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-ExtraBold.eot');
+    src: url('../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
+        url('../fonts/Gilroy-ExtraBold.ttf') format('truetype'),
+        url('../fonts/Gilroy-ExtraBold.svg#Gilroy-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #464646;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-logo {
+    font-family: "Gilroy", sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.main-logo:hover,
+.main-navigation a:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.main-logo:active,
+.main-navigation a:active {
+    opacity: 0.3;
+}
+
+.user-navigation,
+.site-navigation,
+.sub-menu {
+    list-style: none;
+}
+
+.user-navigation a,
+.sub-menu a {
+    color: #000000;
+    line-height: 36px;
+}
+
+.navigation-item > a {
+    font-family: "Gilroy", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000000;
+}
+
+.main-navigation {
+    background-color: #f7e296;
+}
+
+.user-navigation form {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.user-navigation input {
+    line-height: 36px;
+    background-color: #f7e296;
+    color: rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+
+    height: 30px;
+    width: 440px;
+    box-sizing: border-box;
+
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+
+    padding: 25px 36px;
+}
+
+.user-navigation .user-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px 20px;
+    color: #000000;
+    z-index: 2;
+    outline: none;
+    border: 2px solid #000000;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.user-navigation .user-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.user-navigation .user-btn:active {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+input[type="search"]:focus {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+input[type="search"]::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="search"]::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="search"]:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="search"]::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="search"]::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+input[type="search"]:hover::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+input[type="search"]:hover::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+input[type="search"]:hover:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+input[type="search"]:hover::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+input[type="search"]:hover::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.slider {
+    position: relative;
+    width: 1160px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.slider input[type=radio] {
+    position: absolute;
+    opacity: 0;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 180px;
+    right: 40px;
+    width: 200px;
+    height: 12px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 3px;
+    vertical-align: top;
+    cursor: pointer;
+
+    background-image: url("../img/slider-button-empty.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 12px
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background-image: url("../img/slider-button.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+}
+
+.slide {
+    width: 1160px;
+    height: 500px;
+    overflow: hidden;
+}
+
+..slide-img img {
+    display: inline-block;
+}
+
+.slide-img {
+    width: 580px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.quadrupter-img {
+    padding-top: 60px;
+}
+
+.slide-text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 580px;
+    padding: 70px 0;
+    color: #464646;
+}
+
+.slide-text p {
+    width: 479px;
+}
+
+.slide-title {
+    font-family: "Gilroy", sans-serif;
+    font-size: 47px;
+    line-height: 1;
+    font-weight: 800;
+    color: black;
+}
+
+.slide .btn {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #f0c52e;
+
+    display: inline-block;
+    padding: 0 44px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.description-slide {
+    border-collapse: collapse;
+}
+
+.description-slide th {
+    font-family: "Gilroy", sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    text-align: left;
+
+    padding-right: 82px;
+    padding-bottom: 15px;
+}
+
+.description-slide th:last-child {
+    padding-right: 0;
+}
+
+.slide{
+    display: none;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+    display: block;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+    display: block;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+    display: block;
+}
