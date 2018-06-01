@@ -227,23 +227,23 @@
       <h2 class="visually-hidden">Логотипы партнеров</h2>
       <ul class="partners-list">
         <li class="partners-item">
-          <a href="https://digbox.ru" aria-label="Фирменный интернет-магазин DJl">
-            <img src="img/partners-1.png" width="127" alt="Фирменный интернет-магазин DJl">
+          <a href="https://digbox.ru" class="dgl" aria-label="Фирменный интернет-магазин DJl">
+            <img src="img/partners-1.png" width="127" height="75" alt="Фирменный интернет-магазин DJl">
           </a>
         </li>
         <li class="partners-item">
-          <a href="http://www.sp-gadgets.com" aria-label="Магазин креплений и аксессуаров для экшн-камер SP Gadgets">
-            <img src="img/partners-2.png" width="250" alt="Магазин креплений и аксессуаров для экшн-камер SP Gadgets">
+          <a href="http://www.sp-gadgets.com" class="gadgets" aria-label="Магазин креплений и аксессуаров для экшн-камер SP Gadgets">
+            <img src="img/partners-2.png" width="250" height="75" alt="Магазин креплений и аксессуаров для экшн-камер SP Gadgets">
           </a>
         </li>
         <li class="partners-item">
-          <a href="https://shop.gopro.com" aria-label="Камеры и аксессуары GoPro">
-            <img src="img/partners-3.png" width="175" height="45" alt="Камеры и аксессуары GoPro">
+          <a href="https://shop.gopro.com" class="gopro" aria-label="Камеры и аксессуары GoPro">
+            <img src="img/partners-3.png" width="175" height="75" alt="Камеры и аксессуары GoPro">
           </a>
         </li>
         <li class="partners-item">
-          <a href="www.vive.com" aria-label="Магазин систем виртуальной реальности Vive">
-            <img src="img/partners-4.png" width="189" alt="Магазин систем виртуальной реальности Vive">
+          <a href="www.vive.com" class="vive" aria-label="Магазин систем виртуальной реальности Vive">
+            <img src="img/partners-4.png" width="189" height="75" alt="Магазин систем виртуальной реальности Vive">
           </a>
         </li>
       </ul>
@@ -252,24 +252,25 @@
       <div class="us">
         <h2 class="description-caption">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="us-big">Device</span>Device работает со многими транспортными компаниями:</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="us-big">Device</span> работает со многими транспортными компаниями:</p>
         <ul class="transport">
-          <li class="transport-list">Деловые линии</li>
+          <li class="transport-list">
+          Деловые линии</li>
           <li class="transport-list">Автотрейдинг</li>
           <li class="transport-list">ЖелДорЭкспедиция</li>
         </ul>
-        <a href="us.html" class="btn">Подробнее о нас</a>
+        <a href="us.html" class="us-btn btn"><span>Подробнее о нас</span></a>
       </div>
       <div class="contacts">
         <h2 class="description-caption">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img src="#" alt="Улица Строителей, 15" width="560" height="222">
-        <a href="us.html" class="btn">Напишите нам</a>
+        <img src="img/map-index.jpg" alt="Улица Строителей, 15" width="560" height="222">
+        <a href="us.html" class="us-btn btn"><span>Напишите нам</span></a>
       </div>
     </section>
     <footer class="main-footer">
       <div class="footer-top">
-        <img src="#" alt="Логотип" width="162" height="34">
+        <span class="main-logo footer-logo">Device</span>
         <ul class="footer-navigation">
           <li class="navigation-title">
             <a href="info.html">Войти</a>
@@ -314,24 +315,28 @@
     </footer>
     <section class="modal modal-login">
       <h2 class="visually-hidden">Обратная связь</h2>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label>Ваше имя<br>
             <input class="name-user" type="text" name="login" placeholder="Представьтесь пожалуйста">
-          </label>
+          </label><br>
           <label>Ваш e-mail:<br>
             <input class="name-user" type="text" name="mail" placeholder="Для отправки ответа">
           </label>
         </p>
-        <textarea name="letter" id="comment" cols="25" rows="10">В свободной форме</textarea>
-        <button class="btn modal-btn" type="submit">Отправить</button>
+        <label>Текст письма<br>
+          <textarea name="letter" id="comment" cols="25" rows="10">В свободной форме</textarea>
+        </label>
+        <input class="btn modal-btn" type="submit" value="Отправить">
+        </form>
         <button class="modal-close" type="button">Закрыть</button>
     </section>
     <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <p>
-      <img src="img/map-index.jpg" width="961" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
+      <img src="img/map-big-index.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
     </p>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
   </main>
 </body>
