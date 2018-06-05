@@ -33,27 +33,74 @@ body {
     color: #464646;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     text-decoration: none;
 }
 
+.btn {
+    font-family: "Gilroy", "Verdana", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    text-align: center;
+    display: inline-block;
+    background-image: linear-gradient(#ffffff 38%, #f0c52e 38%, #f0c52e 60%, #ffffff 60%);
+}
+
+.main-navigation {
+    background-color: #f7e296;
+}
+
 .main-logo {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-size: 48px;
     font-weight: 800;
     color: #000000;
     text-transform: uppercase;
 }
 
+.exit {
+    opacity: 0.3;
+}
+
 .main-logo:hover,
-.main-navigation a:hover {
+.main-navigation a:hover:not(.exit),
+.main-logo:focus,
+.main-navigation a:focus:not(.exit) {
     opacity: 0.6;
     cursor: pointer;
+    outline: none;
 }
 
 .main-logo:active,
 .main-navigation a:active {
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .user-navigation,
@@ -69,14 +116,10 @@ a {
 }
 
 .navigation-item > a {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-size: 18px;
     font-weight: 800;
     color: #000000;
-}
-
-.main-navigation {
-    background-color: #f7e296;
 }
 
 .user-navigation form {
@@ -92,37 +135,46 @@ a {
     border: none;
     outline: none;
 
-    height: 30px;
     width: 440px;
+    padding: 10px 40px;
     box-sizing: border-box;
 
     background-image: url("../img/search.svg");
     background-repeat: no-repeat;
     background-position: 0 50%;
-
-    padding: 25px 36px;
 }
 
 .user-navigation .user-btn {
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 10px 20px;
+    line-height: 36px;
+    padding: 5px 20px;
     color: #000000;
-    z-index: 2;
+    z-index: 1000;
     outline: none;
     border: 2px solid #000000;
     display: inline-block;
+    vertical-align: middle;
     background-color: transparent;
     cursor: pointer;
+
+    display: none;
 }
 
-.user-navigation .user-btn:hover {
+input[type="search"]:focus + .user-btn {
+    display: block;
+}
+
+.user-btn:hover,
+.user-btn:focus {
+    display: block;
     background-color: #000000;
     color: #ffffff;
 }
 
-.user-navigation .user-btn:active {
+.user-btn:active {
+    display: block;
     background-color: #000000;
     color: rgba(255, 255, 255, 0.3);
 }
@@ -206,13 +258,13 @@ input[type="search"]:hover::placeholder {
 
     background-image: url("../img/slider-button-empty.svg");
     background-repeat: no-repeat;
-    background-size: 12px 12px
+    background-size: 12px 12px;
 }
 
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-    background-image: url("../img/slider-button.svg");
+    background-image: url("../img/slider-button1.svg");
     background-repeat: no-repeat;
     background-size: 12px 12px;
 }
@@ -251,7 +303,7 @@ input[type="search"]:hover::placeholder {
 }
 
 .slide-title {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-size: 47px;
     line-height: 1;
     font-weight: 800;
@@ -259,19 +311,23 @@ input[type="search"]:hover::placeholder {
 }
 
 .slide .btn {
-    font-family: "Gilroy", sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: 2px;
-    color: #000000;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: #f0c52e;
-
     display: inline-block;
     padding: 0 44px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.slide .us-btn:hover,
+.slide .us-btn:focus {
+    margin-top: 39px;
+    margin-bottom: 39px;
+    padding: 11px 44px;
+    background: #f0c52e;
+    outline: none;
+}
+
+.slide .us-btn:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .description-slide {
@@ -279,7 +335,7 @@ input[type="search"]:hover::placeholder {
 }
 
 .description-slide th {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-size: 36px;
     font-weight: 300;
     text-align: left;
@@ -316,7 +372,7 @@ input[type="search"]:hover::placeholder {
 }
 
 .product-item span {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-weight: 800;
     letter-spacing: 1px;
     color: #000000;
@@ -332,25 +388,39 @@ input[type="search"]:hover::placeholder {
     width: 1160px;
     min-height: 388px;
     margin: 0 auto;
+    min-height: 320px;
+}
+
+.tab-controls::after {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: 0;
+    border: 6px solid #000000;
+    height: 310px;
 }
 
 .tab input[type=radio] {
-    position:absolute;
-    opacity:0;
+    position: absolute;
+    opacity: 0;
 }
 
 .tab-controls {
     position: absolute;
-    top: 90px;
+    top: 80px;
     left: 0;
-    width: 284px;
+
 }
 
 .tab-controls label {
     z-index: 1000;
     cursor: pointer;
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    width: 160px;
+    text-align: center;
+    padding: 7px 0;
 }
 
 .tabs {
@@ -361,30 +431,32 @@ input[type="search"]:hover::placeholder {
 }
 
 .tab-text {
-    padding-left: 116px;
+    padding-left: 118px;
     min-height: 200px;
-    width: 433px;
-    border-left: 7px solid #000000;
+    width: 440px;
 }
 
 .tab-text h3 {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-weight: 800;
     font-size: 47px;
+    line-height: 24px;
     color: #000000;
     letter-spacing: 1px;
 }
 
-.tab-slide:nth-child(1){
+.tab-slide:nth-child(1) {
     background-image: url("../img/delivery.svg");
     background-repeat: no-repeat;
-    background-position: 90%;
+    background-position: 91% 10%;
 }
+
 .tab-slide:nth-child(2){
     background-image: url("../img/warranty.svg");
     background-repeat: no-repeat;
     background-position: 90%;
 }
+
 .tab-slide:nth-child(3){
     background-image: url("../img/credit.svg");
     background-repeat: no-repeat;
@@ -394,7 +466,11 @@ input[type="search"]:hover::placeholder {
 #tab-1:checked ~ .tab-controls label[for="tab-1"],
 #tab-2:checked ~ .tab-controls label[for="tab-2"],
 #tab-3:checked ~ .tab-controls label[for="tab-3"] {
-    background-color: #c1c1c1;
+    background: #000000;
+    color: #f7e184;
+    padding-left: 20px;
+    width: 260px;
+    text-align: left;
 }
 
 .tabs .tab-slide {
@@ -404,15 +480,16 @@ input[type="search"]:hover::placeholder {
 #tab-1:checked ~ .tabs .tab-slide:nth-child(1) {
     display: block;
 }
+
 #tab-2:checked ~ .tabs .tab-slide:nth-child(2) {
     display: block;
 }
+
 #tab-3:checked ~ .tabs .tab-slide:nth-child(3) {
     display: block;
 }
 
 /*partners*/
-
 .partners-list {
     margin: 0;
     padding: 0;
@@ -421,63 +498,45 @@ input[type="search"]:hover::placeholder {
 
 .partners-item img {
     opacity: 0.2;
+    height: 100px;
+    vertical-align: middle;
 }
 
-.partners-item .dgl {
+.partners-item a {
     display: inline-block;
-    width: 127px;
-    height: 75px;
 }
 
 .partners-item .dgl:hover {
-    background-image: url("../img/logo-1hover.png");
-    background-position: 50% 50%;
+    background-image: url("../img/logo-1hover.jpg");
+    background-position: 50%;
     background-repeat: no-repeat;
-    background-size: 127px 75px;
-}
-
-.partners-item .gadgets {
-    display: inline-block;
-    width: 250px;
-    height: 75px;
+    background-size: 260px 100px;
 }
 
 .partners-item .gadgets:hover {
-    background-image: url("../img/logo-2hover.png");
+    background-image: url("../img/logo-2hover.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 250px 75px;
-}
-
-.partners-item .gopro {
-    display: inline-block;
-    width: 175px;
-    height: 75px;
+    background-size: 260px 100px;
 }
 
 .partners-item .gopro:hover {
-    background-image: url("../img/logo-3hover.png");
+    background-image: url("../img/logo-3hover.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 175px 75px;
-}
-
-.partners-item .vive {
-    display: inline-block;
-    width: 189px;
-    height: 75px;
+    background-size: 260px 100px;
 }
 
 .partners-item .vive:hover {
-    background-image: url("../img/logo-4hover.png");
+    background-image: url("../img/logo-4hover.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 189px 75px;
+    background-size: 260px 100px;
 }
 
 /*description*/
 .description-caption {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-weight: 800;
     font-size: 47px;
     letter-spacing: 1px;
@@ -493,40 +552,32 @@ input[type="search"]:hover::placeholder {
 }
 
 .transport-list {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-weight: 800;
     font-size: 16px;
     color: #000000;
     line-height: 40px;
-
     list-style: none;
+
+    display: block;
+    padding-left: 34px;
     background-image: url("../img/us-button.svg");
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: 0 50%;
 }
 
-.btn {
-    font-family: "Gilroy", sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    color: #000000;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    text-align: center;
+.description .us-btn {
     width: 260px;
-    display: inline-block;
-    background-image: linear-gradient(#ffffff 38%, #f0c52e 38%, #f0c52e 60%, #ffffff 60%);
 }
 
-.us-btn span:hover {
-    width: 260px;
+.description .us-btn:hover,
+.description .us-btn:focus {
     padding: 11px 0;
-    display: inline-block;
-    background-color: #f0c52e;
+    background: #f0c52e;
+    outline: none;
 }
 
-.us-btn span:active {
+.description .us-btn:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -547,7 +598,7 @@ input[type="search"]:hover::placeholder {
 .footer-navigation a,
 .footer-service a,
 .social-icon a,
-.user-list__phone {
+.user-phone {
     color: #ffffff;
 }
 
@@ -569,7 +620,7 @@ input[type="search"]:hover::placeholder {
 }
 
 .service-title {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Gilroy", "Verdana", sans-serif;
     font-weight: 800;
     font-size: 18px;
     letter-spacing: 2px;
@@ -610,8 +661,305 @@ textarea:focus {
     background-color: #f6dada;
 }
 
-.modal-btn {
+.modal .modal-btn {
+    width: 199px;
     border: none;
+}
+
+.modal .modal-btn:hover,
+.modal .modal-btn:focus {
+    padding: 11px 0;
+    background: #f0c52e;
     cursor: pointer;
-    width: 200px;
+    outline: none;
+}
+
+.modal .modal-btn:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/*breadcrumbs*/
+.page-title {
+    font-family: "Gilroy", "Verdana", sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    letter-spacing: 1px;
+}
+
+.breadcrumbs {
+    list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+    color: rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+.breadcrumbs a:active {
+    color: rgba(0, 0, 0, 0.1);
+}
+
+/*filters*/
+.range-filter {
+    width: 207px;
+}
+
+.range-controls {
+    position: relative;
+    height: 23px;
+    width: 205px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: #e1e1e1;
+}
+
+.range-controls .bar {
+    height: 2px;
+    background-color: #b0d56f;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+    left: 0;
+}
+
+.range-controls .toggle-max {
+    left: 116px;
+}
+
+.price-controls {
+    font-size: 0;
+}
+
+.price-controls label {
+    font-size: 14px;
+    line-height: 22px;
+    width: 25%;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.max-price {
+    text-align: right;
+}
+
+.price-controls input {
+    font-size: 14px;
+    width: 75px;
+    color: rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.filters fieldset {
+    border: none;
+}
+
+.filters .caption,
+.sorting-box .caption {
+    font-family: "Gilroy", "Verdana", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.filters ul {
+    list-style: none;
+    line-height: 14px;
+    line-height: 40px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.filter-option input {
+    box-sizing: border-box;
+}
+
+.filters legend {
+    font-family: "Gilroy", "Verdana", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.filter-input:disabled + label {
+    color: #000000;
+    opacity: 0.5;
+}
+
+.filter-option label,
+.filter-radio label {
+    position: relative;
+    margin-left: 42px;
+    cursor: pointer;
+}
+
+.filter-option input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -42px;
+    width: 23px;
+    height: 23px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+}
+
+.filter-radio input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: -42px;
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/radio-off.svg");
+    background-repeat: no-repeat;
+}
+
+.filter-option input[type="checkbox"]:checked ~ label::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 23px;
+    background: url("../img/checkbox-off.svg") 0 0 no-repeat,
+                url("../img/checkbox-on.svg") 0 0 no-repeat;
+}
+
+.filter-radio input[type="radio"]:checked ~ label::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: url("../img/radio-on.svg") 0 0 no-repeat;
+}
+
+.filter-button {
+    border: none;
+    width: 202px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    padding: 11px 0;
+    background: #f0c52e;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+/*"sorting*/
+
+.sorting-list {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 18px;
+    list-style: none;
+}
+
+.sorting-item {
+    position: relative;
+}
+
+.sorting-item a {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-item a:hover,
+.sorting-item a:focus {
+    color: rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+.sorting-item a:active {
+    color: #000000;
+}
+
+.sorting-item .arrow::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    border: 10px solid #000000;
+    border-right-width: 5px;
+    border-left-width: 5px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+.arrow-up::before {
+    border-top-width: 0;
+}
+
+.arrow-down::before {
+    border-bottom-width: 0;
+}
+
+.catalog-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.catalog-item h3 {
+    font-family: "Gilroy", "Verdana", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000000;
+}
+
+.catalog-item span {
+    font-family: "Gilroy", "Verdana", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.pagination-list {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.pagination-item a {
+    font-family: "Gilroy", "Verdana", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item .current,
+.pagination-item .backward,
+.pagination-item .forward {
+    color: #000000;
 }
