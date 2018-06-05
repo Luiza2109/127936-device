@@ -70,6 +70,7 @@ a {
 
     text-align: center;
     display: inline-block;
+    vertical-align: bottom;
     background-image: linear-gradient(#ffffff 38%, #f0c52e 38%, #f0c52e 60%, #ffffff 60%);
 }
 
@@ -132,7 +133,7 @@ a {
     line-height: 36px;
     background-color: #f7e296;
     color: rgba(0, 0, 0, 0.3);
-    border: none;
+    border-color: transparent;
     outline: none;
 
     width: 440px;
@@ -154,8 +155,6 @@ a {
     z-index: 1000;
     outline: none;
     border: 2px solid #000000;
-    display: inline-block;
-    vertical-align: middle;
     background-color: transparent;
     cursor: pointer;
 
@@ -275,7 +274,7 @@ input[type="search"]:hover::placeholder {
     overflow: hidden;
 }
 
-..slide-img img {
+.slide-img img {
     display: inline-block;
 }
 
