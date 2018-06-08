@@ -211,7 +211,8 @@ a {
     pointer-events: none;
 }
 
-.user-form:focus-within .user-btn {
+.user-form:focus-within .user-btn,
+.user-form .user-btn:focus {
     opacity: 1;
     pointer-events: all;
 }
