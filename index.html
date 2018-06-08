@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="main-header">
+  <header class="main-header container">
     <nav class="main-navigation">
       <a class="header-logo">
         <span class="main-logo">Device</span>
@@ -152,40 +152,64 @@
     <section class="product">
       <h2 class="visually-hidden">Список товаров</h2>
       <ul class="product-list">
-        <li class="product-item virtual">
-          <a href="virtual.html">
-            <img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">
-            <span>Виртуальная реальность</span>
+        <li class="product-item">
+          <a href="virtual.html" class="product-img">
+            <div class="product-box-img">
+              <img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55" class="product-active">
+            </div>
+            <div class="product-box-text">
+              <span class="product-active">Виртуальная реальность</span>
+            </div>
           </a>
         </li>
-        <li class="product-item monopod">
-          <a href="catalog.html">
-            <img src="img/popular-2.svg" alt="Моноподы для селфи" width="86" height="117">
-            <span>Моноподы для селфи</span>
+        <li class="product-item">
+          <a href="catalog.html" class="product-img">
+            <div class="product-box-img">
+              <img src="img/popular-2.svg" alt="Моноподы для селфи" width="86" height="117" class="product-active">
+            </div>
+            <div class="product-box-text">
+              <span class="product-active">Моноподы для селфи</span>
+            </div>
           </a>
         </li>
-        <li class="product-item action">
-          <a href="action.html">
-            <img src="img/popular-3.svg" alt="Экшн-камеры" width="71" height="87">
-            <span>Экшн-камеры</span>
+        <li class="product-item">
+          <a href="virtual.html" class="product-img">
+            <div class="product-box-img">
+              <img src="img/popular-3.svg" alt="Экшн-камеры" width="71" height="87" class="product-active">
+            </div>
+            <div class="product-box-text">
+              <span class="product-active">Экшн-камеры</span>
+            </div>
           </a>
         </li>
-        <li class="product-item bracelet">
-          <a href="bracelet.html">
-            <img src="img/popular-4.svg" alt="Фитнес-браслеты" width="107" height="65">
-            <span>Фитнес-браслеты</span>
+        <li class="product-item">
+          <a href="virtual.html" class="product-img">
+            <div class="product-box-img">
+              <img src="img/popular-4.svg" alt="Фитнес-браслеты" width="107" height="65" class="product-active">
+            </div>
+            <div class="product-box-text">
+              <span class="product-active">Фитнес-браслеты</span>
+            </div>
           </a>
         </li>
-        <li class="product-item clock">
-          <a href="clock.html">
-            <img src="img/popular-5.svg" alt="Умные часы" width="56" height="98">
-            <span>Умные часы</span>
+        <li class="product-item">
+          <a href="virtual.html" class="product-img">
+            <div class="product-box-img">
+              <img src="img/popular-5.svg" alt="Умные часы" width="56" height="98" class="product-active">
+            </div>
+            <div class="product-box-text">
+              <span class="product-active">Умные часы</span>
+            </div>
           </a>
         </li>
-        <li class="product-item quadrupter">
-          <a href="quadrupter.html">
-            <img src="img/poppular-6.svg" alt="Квадрокоптеры" width="132" height="69">
-            <span>Квадрокоптеры</span>
+        <li class="product-item">
+          <a href="virtual.html" class="product-img">
+            <div class="product-box-img">
+              <img src="img/poppular-6.svg" alt="Квадрокоптеры" width="132" height="69" class="product-active">
+            </div>
+            <div class="product-box-text">
+              <span class="product-active">Квадрокоптеры</span>
+            </div>
           </a>
         </li>
       </ul>
@@ -242,75 +266,80 @@
           </a>
         </li>
         <li class="partners-item">
-          <a href="www.vive.com" class="vive" aria-label="Магазин систем виртуальной реальности Vive" target="_blank" rel="noopener">
+          <a href="https://www.vive.com" class="vive" aria-label="Магазин систем виртуальной реальности Vive" target="_blank" rel="noopener">
             <img src="img/partners-4.jpg" width="260" height="100" alt="Магазин систем виртуальной реальности Vive">
           </a>
         </li>
       </ul>
     </section>
     <section class="description">
-      <div class="us">
-        <h2 class="description-caption">О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="us-big">Device</span> работает со многими транспортными компаниями:</p>
-        <ul class="transport">
-          <li class="transport-list">
-          Деловые линии</li>
-          <li class="transport-list">Автотрейдинг</li>
-          <li class="transport-list">ЖелДорЭкспедиция</li>
-        </ul>
-        <a href="us.html" class="btn us-btn">Подробнее о нас</a>
-      </div>
-      <div class="contacts">
-        <h2 class="description-caption">Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img src="img/map-index.jpg" alt="Улица Строителей, 15" width="560" height="222">
-        <a href="us.html" class="btn us-btn">Напишите нам</a>
+      <div class="description-content-wrapper">
+        <div class="us">
+          <h2 class="description-caption">О нас</h2>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! <span class="us-big">Device</span> работает со многими транспортными компаниями:</p>
+          <ul class="transport">
+            <li class="transport-list">
+            Деловые линии</li>
+            <li class="transport-list">Автотрейдинг</li>
+            <li class="transport-list">ЖелДорЭкспедиция</li>
+          </ul>
+          <a href="us.html" class="btn us-btn">Подробнее о нас</a>
+        </div>
+        <div class="contacts">
+          <h2 class="description-caption">Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <img src="img/map-index.jpg" alt="Улица Строителей, 15" width="560" height="222">
+          <a href="us.html" class="btn us-btn">Напишите нам</a>
+        </div>
       </div>
     </section>
+  </main>
     <footer class="main-footer">
-      <div class="footer-top">
-        <span class="main-logo footer-logo">Device</span>
-        <ul class="footer-navigation">
-          <li class="navigation-title">
-            <a href="info.html">Войти</a>
-          </li>
-          <li class="navigation-title">
-            <a href="compare.html">Сравнить</a>
-          </li>
-          <li class="navigation-title">
-            <a href="basket.html">Корзина</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-middle">
-        <p>г.Москва, ул. Строителей, 15</p>
-        <ul class="footer-service">
-          <li class="service-title">
-            <a href="">Доставка</a>
-          </li>
-          <li class="service-title">
-            <a href="">Гарантии</a>
-          </li>
-          <li class="service-title">
-            <a href="">Контакты</a>
-          </li>
-        </ul>
-        <p>Тел.:<a href="tel:88008008080" class="user-phone">+7(495)495-95-95</a></p>
-      </div>
-      <div class="footer-bottom">
-        <ul class="social-icon">
-          <li class="social-item">
-            <a href="https://www.facebook.com" aria-label="Фейсбук" target="_blank" rel="noopener"></a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.instagram.com" aria-label="Инстаграм" target="_blank" rel="noopener"></a>
-          </li>
-          <li class="social-item">
-            <a href="https://twitter.com" aria-label="Твиттер" target="_blank" rel="noopener"></a>
-          </li>
-        </ul>
-        <a href="https://up.htmlacademy.ru" class="htmlacademy" aria-label="Html Academy" target="_blank" rel="noopener"></a>
+      <div class="main-footer-wrapper container">
+        <div class="footer-top">
+          <span class="main-logo footer-logo">Device</span>
+          <ul class="footer-navigation">
+            <li class="navigation-title">
+              <a href="info.html">Войти</a>
+            </li>
+            <li class="navigation-title">
+              <a href="compare.html">Сравнить</a>
+            </li>
+            <li class="navigation-title">
+              <a href="basket.html">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <p>г.Москва, ул. Строителей, 15</p>
+          <ul class="footer-service">
+            <li class="service-title">
+              <a href="">Доставка</a>
+            </li>
+            <li class="service-title">
+              <a href="">Гарантии</a>
+            </li>
+            <li class="service-title">
+              <a href="">Контакты</a>
+            </li>
+          </ul>
+          <p>Тел.:<a href="tel:88008008080" class="user-phone">+7(495)495-95-95</a></p>
+        </div>
+        <div class="footer-bottom">
+          <ul class="social-icon">
+            <li class="social-item">
+              <a href="https://www.facebook.com" aria-label="Фейсбук" target="_blank" rel="noopener"></a>
+            </li>
+            <li class="social-item">
+              <a href="https://www.instagram.com" aria-label="Инстаграм" target="_blank" rel="noopener"></a>
+            </li>
+            <li class="social-item">
+              <a href="https://twitter.com" aria-label="Твиттер" target="_blank" rel="noopener"></a>
+            </li>
+          </ul>
+          <a href="https://up.htmlacademy.ru" class="htmlacademy" aria-label="Html Academy" target="_blank" rel="noopener"></a>
+        </div>
       </div>
     </footer>
     <section class="modal modal-login">
@@ -338,6 +367,5 @@
     </p>
     <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
   </section>
-  </main>
 </body>
 </html>
