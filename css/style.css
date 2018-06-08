@@ -207,29 +207,35 @@ a {
     background-color: transparent;
     cursor: pointer;
 
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
-input[type="search"]:focus + .user-btn {
-    display: block;
+.user-form:focus-within .user-btn {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .user-btn:hover,
 .user-btn:focus {
-    display: block;
-    background-color: #000000;
     color: #ffffff;
-}
-
-.user-btn:active {
-    display: block;
     background-color: #000000;
-    color: rgba(255, 255, 255, 0.3);
 }
 
 input[type="search"]:focus {
     color: #000000;
     border-bottom: 2px solid #000000;
+}
+
+input[type="search"]:focus + .user-btn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.user-btn:active {
+    opacity: 1;
+    pointer-events: all;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 input[type="search"]::-moz-placeholder {
@@ -478,11 +484,14 @@ input[type="search"]:hover::placeholder {
     color: #000000;
 }
 
-.product-box-img:hover {
+.product-img:hover .product-box-img,
+.product-img:focus .product-box-img {
+    outline: none;
     background-color: #f0c52e;
 }
 
-.product-item .product-active:active {
+.product-img:active .product-box-img img,
+.product-img:active .product-box-text span {
     opacity: 0.3;
 }
 
@@ -579,6 +588,17 @@ input[type="search"]:hover::placeholder {
     padding-left: 20px;
     width: 260px;
     text-align: left;
+}
+
+#tab-1:focus ~ .tab-controls label[for="tab-1"],
+#tab-2:focus ~ .tab-controls label[for="tab-2"],
+#tab-3:focus ~ .tab-controls label[for="tab-3"] {
+    outline: 1px solid #f0c52e;
+}
+
+.tab-btn:hover {
+    padding: 7px 0;
+    background: #f0c52e;
 }
 
 .tabs .tab-slide {
