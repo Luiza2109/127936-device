@@ -15,7 +15,7 @@
       </a>
       <ul class="user-navigation catalog-navigation">
         <li>
-          <form action="https://echo.htmlacademy.ru/" method="post">
+          <form action="https://echo.htmlacademy.ru/" method="post" class="user-form">
             <input name="search" placeholder="Поиск по сайту" type="search">
               <button type="submit" class="user-btn">Найти</button>
           </form>
@@ -101,8 +101,8 @@
                 <li class="sorting-item">
                   <a href="#">По популярности</a>
                 </li>
-                <li class="sorting-item">
-                  <a href="#" class="arrow arrow-up" aria-label="Кнопка сортировки вверх"></a>
+                <li class="arrow arrow-up">
+                  <a href="#" aria-label="Кнопка сортировки вверх"></a>
                 </li>
                 <li class="arrow arrow-down">
                   <a href="#" aria-label="Кнопка сортировки вниз"></a>
@@ -117,7 +117,7 @@
       <div class="container">
         <div class="filter-catalog-box">
           <section class="filter">
-            <form action="https://echo.htmlacademy.ru/" method="get">
+            <form action="https://echo.htmlacademy.ru/" method="post">
               <fieldset>
                 <legend>Стоимость</legend>
                 <div class="range-filter">
@@ -163,11 +163,11 @@
                 <legend>Bluetooth</legend>
                 <ul>
                   <li class="filter-radio">
-                    <input class="visually-hidden" type="radio" name="product-group" value="yes" id="filter-yes">
+                    <input class="visually-hidden" type="radio" name="bluetooth" value="yes" id="filter-yes">
                     <label for="filter-yes">Есть</label>
                   </li>
                   <li class="filter-radio">
-                    <input class="visually-hidden" type="radio" name="product-group" value="no" id="filter-no" checked>
+                    <input class="visually-hidden" type="radio" name="bluetooth" value="no" id="filter-no" checked>
                     <label for="filter-no">Нет</label>
                   </li>
                 </ul>
@@ -176,53 +176,56 @@
             </form>
           </section>
           <section class="catalog">
-            <ul class="catalog-list">
-              <li class="catalog-item">
-                <a href="self-stick.html">
-                  <img src="img/catalog-item-1.jpg" width="359" height="379" alt="Любительская селфи-палка">
-                </a>
-                <h3>Любительская селфи-палка</h3>
-                <span>500 руб.</span>
-              </li>
-              <li class="catalog-item">
-                <a href="self-stick.html">
-                  <img src="img/catalog-item-2.jpg" width="359" height="379" alt="Профессиональная селфи-палка">
-                </a>
-                <h3>Профессиональная селфи-палка </h3>
-                <span>1 500 руб.</span>
-              </li>
-              <li class="catalog-item">
-                <a href="self-stick.html">
-                  <img src="img/catalog-item-3.jpg" width="359" height="379" alt="Непотопляемая селфи-палка">
-                </a>
-                <h3>Непотопляемая селфи-палка</h3>
-                <span>2 500 руб.</span>
-              </li>
-              <li class="catalog-item">
-                <a href="self-stick.html">
-                  <img src="img/catalog-item-4.jpg" width="359" height="379" alt="Селфи-палка «Следуй за мной»">
-                </a>
-                <h3>Селфи-палка «Следуй за мной»</h3>
-                <span>4 900 руб.</span>
-              </li>
-            </ul>
-            <ul class="pagination-list">
-              <li class="pagination-item">
-                <a href="#" class="backward">Назад</a>
-              </li>
-              <li class="pagination-item pagination-item-current">
-                <a class="current">1</a>
-              </li>
-              <li class="pagination-item">
-                <a href="#">2</a>
-              </li>
-              <li class="pagination-item">
-                <a href="#">3</a>
-              </li>
-              <li class="pagination-item">
-                <a href="#" class="forward">Вперед</a>
-              </li>
-            </ul>
+            <h2 class="visually-hidden">Каталог товаров</h2>
+            <nav class="catalog-product">
+              <ul class="catalog-list">
+                <li class="catalog-item">
+                  <a href="self-stick.html">
+                    <img src="img/catalog-item-1.jpg" width="360" height="379" alt="Любительская селфи-палка">
+                  </a>
+                  <h3>Любительская селфи-палка</h3>
+                  <span>500 руб.</span>
+                </li>
+                <li class="catalog-item">
+                  <a href="self-stick.html">
+                    <img src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                  </a>
+                  <h3>Профессиональная селфи-палка </h3>
+                  <span>1 500 руб.</span>
+                </li>
+                <li class="catalog-item">
+                  <a href="self-stick.html">
+                    <img src="img/catalog-item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                  </a>
+                  <h3>Непотопляемая селфи-палка</h3>
+                  <span>2 500 руб.</span>
+                </li>
+                <li class="catalog-item">
+                  <a href="self-stick.html">
+                    <img src="img/catalog-item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                  </a>
+                  <h3>Селфи-палка «Следуй за мной»</h3>
+                  <span>4 900 руб.</span>
+                </li>
+              </ul>
+              <ul class="pagination-list">
+                <li class="pagination-item">
+                  <a href="#" class="backward">Назад</a>
+                </li>
+                <li class="pagination-item pagination-item-current">
+                  <a class="current">1</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="#">3</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="#" class="forward">Вперед</a>
+                </li>
+              </ul>
+            </nav>
           </section>
         </div>
       </div>

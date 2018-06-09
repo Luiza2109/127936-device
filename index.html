@@ -9,7 +9,9 @@
 </head>
 <body>
   <header class="main-header container">
+    <h1 class="visually-hidden">Интернет магазин электроники Device</h1>
     <nav class="main-navigation">
+      <h2 class="visually-hidden">Главное меню</h2>
       <a class="header-logo">
         <span class="main-logo">Device</span>
       </a>
@@ -21,13 +23,13 @@
           </form>
         </li>
         <li>
-          <a href="info.html">Войти</a>
+          <a href="info.html" class="user-navigation-entrance">Войти</a>
         </li>
         <li>
-          <a href="compare.html">Сравнить</a>
+          <a href="compare.html" class="user-navigation-item">Сравнить</a>
         </li>
         <li>
-          <a href="basket.html">Корзина</a>
+          <a href="basket.html" class="user-navigation-item">Корзина</a>
         </li>
       </ul>
       <ul class="site-navigation">
@@ -70,9 +72,9 @@
       </ul>
     </nav>
     <div class="slider">
-      <input type="radio" id="btn-1" name="toggle" checked>
-      <input type="radio" id="btn-2" name="toggle">
-      <input type="radio" id="btn-3" name="toggle">
+      <input type="radio" id="btn-1" name="toggle" checked class="visually-hidden">
+      <input type="radio" id="btn-2" name="toggle" class="visually-hidden">
+      <input type="radio" id="btn-3" name="toggle" class="visually-hidden">
       <div class="slider-controls">
         <label for="btn-1"></label>
         <label for="btn-2"></label>
@@ -92,14 +94,14 @@
             </a>
             <table class="description-slide">
               <tr>
-                <th>8,5 м</th>
-                <th>5 кг</th>
-                <th>Карбон</th>
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
               </tr>
               <tr>
-                <td>Длина палки</td>
-                <td>Вес палки</td>
-                <td>Материал</td>
+                <th>Длина палки</th>
+                <th>Вес палки</th>
+                <th>Материал</th>
               </tr>
             </table>
           </div>
@@ -115,10 +117,10 @@
             <a class="btn us-btn" href="info.html">Подробнее</a>
             <table class="description-slide">
               <tr>
-                <th>48 часов</th>
+                <td>48 часов</td>
               </tr>
               <tr>
-                <td>Без подзарядки</td>
+                <th>Без подзарядки</th>
               </tr>
             </table>
           </div>
@@ -134,12 +136,12 @@
             <a class="btn us-btn" href="info.html">Подробнее</a>
             <table class="description-slide">
               <tr>
-                <th>800 м</th>
-                <th>50 м</th>
+                <td>800 м</td>
+                <td>50 м</td>
               </tr>
               <tr>
-                <td>Дальность полета</td>
-                <td>Радиус поражения</td>
+                <th>Дальность полета</th>
+                <th>Радиус поражения</th>
               </tr>
             </table>
           </div>
@@ -148,7 +150,6 @@
     </div>
   </header>
   <main class="container">
-    <h1 class="visually-hidden">Интернет магазин электроники Device</h1>
     <section class="product">
       <h2 class="visually-hidden">Список товаров</h2>
       <ul class="product-list">
@@ -205,7 +206,7 @@
         <li class="product-item">
           <a href="virtual.html" class="product-img">
             <div class="product-box-img">
-              <img src="img/poppular-6.svg" alt="Квадрокоптеры" width="132" height="69" class="product-active">
+              <img src="img/popular-6.svg" alt="Квадрокоптеры" width="132" height="69" class="product-active">
             </div>
             <div class="product-box-text">
               <span class="product-active">Квадрокоптеры</span>
@@ -324,7 +325,7 @@
               <a href="">Контакты</a>
             </li>
           </ul>
-          <p>Тел.:<a href="tel:88008008080" class="user-phone">+7(495)495-95-95</a></p>
+          <p>Тел.:<a href="tel:84954959595" class="user-phone">+7(495)495-95-95</a></p>
         </div>
         <div class="footer-bottom">
           <ul class="social-icon">
@@ -348,9 +349,11 @@
         <p>
           <label>Ваше имя<br>
             <input class="name-user" type="text" name="login" placeholder="Представьтесь пожалуйста">
-          </label><br>
+          </label>
+        </p>
+        <p>
           <label>Ваш e-mail:<br>
-            <input class="name-user" type="text" name="mail" placeholder="Для отправки ответа">
+            <input class="name-user" type="email" name="mail" placeholder="Для отправки ответа">
           </label>
         </p>
         <label>Текст письма<br>

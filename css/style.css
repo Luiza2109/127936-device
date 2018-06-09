@@ -39,6 +39,11 @@ body {
     padding: 0 20px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -103,14 +108,7 @@ a {
     background-color: #f7e296;
 }
 
-.user-navigation {
-    margin: 0;
-    padding: 0;
-    width: 1040px;
-
-    list-style: none;
-}
-
+.user-navigation,
 .site-navigation {
     margin: 0;
     padding: 0;
@@ -158,11 +156,31 @@ a {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.user-navigation {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
 
 .user-navigation a,
 .sub-menu a {
     color: #000000;
     line-height: 36px;
+
+    display: block;
+    margin-left: 97px;
+    padding-top: 14px;
+}
+
+.user-navigation-entrance {
+    margin-right: 72px;
 }
 
 .navigation-item > a {
@@ -223,12 +241,12 @@ a {
     background-color: #000000;
 }
 
-input[type="search"]:focus {
+.user-form input[type="search"]:focus {
     color: #000000;
     border-bottom: 2px solid #000000;
 }
 
-input[type="search"]:focus + .user-btn {
+.user-form input[type="search"]:focus + .user-btn {
     opacity: 1;
     pointer-events: all;
 }
@@ -239,43 +257,43 @@ input[type="search"]:focus + .user-btn {
     color: rgba(255, 255, 255, 0.3);
 }
 
-input[type="search"]::-moz-placeholder {
+.user-form input[type="search"]::-moz-placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
-input[type="search"]::-webkit-input-placeholder {
+.user-form input[type="search"]::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
-input[type="search"]:-ms-input-placeholder {
+.user-form input[type="search"]:-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
-input[type="search"]::-ms-input-placeholder {
+.user-form input[type="search"]::-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
-input[type="search"]::placeholder {
+.user-form input[type="search"]::placeholder {
     color: rgba(0, 0, 0, 0.3);
 }
 
-input[type="search"]:hover::-moz-placeholder {
+.user-form input[type="search"]:hover::-moz-placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
 
-input[type="search"]:hover::-webkit-input-placeholder {
+.user-form input[type="search"]:hover::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
 
-input[type="search"]:hover:-ms-input-placeholder {
+.user-form input[type="search"]:hover:-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
 
-input[type="search"]:hover::-ms-input-placeholder {
+.user-form input[type="search"]:hover::-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
 
-input[type="search"]:hover::placeholder {
+.user-form input[type="search"]:hover::placeholder {
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -287,11 +305,6 @@ input[type="search"]:hover::placeholder {
     height: 500px;
     margin: 0 auto;
     margin-bottom: 100px;
-}
-
-.slider input[type=radio] {
-    position: absolute;
-    opacity: 0;
 }
 
 .slider-controls {
@@ -391,16 +404,22 @@ input[type="search"]:hover::placeholder {
 }
 
 .description-slide th {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+}
+
+.description-slide td {
     font-family: "Gilroy", "Verdana", sans-serif;
     font-size: 36px;
     font-weight: 300;
-    text-align: left;
 
     padding-right: 82px;
     padding-bottom: 15px;
 }
 
-.description-slide th:last-child {
+.description-slide td:last-child {
     padding-right: 0;
 }
 
@@ -408,14 +427,8 @@ input[type="search"]:hover::placeholder {
     display: none;
 }
 
-#btn-1:checked ~ .slides .slide:nth-child(1) {
-    display: block;
-}
-
-#btn-2:checked ~ .slides .slide:nth-child(2) {
-    display: block;
-}
-
+#btn-1:checked ~ .slides .slide:nth-child(1),
+#btn-2:checked ~ .slides .slide:nth-child(2),
 #btn-3:checked ~ .slides .slide:nth-child(3) {
     display: block;
 }
@@ -447,7 +460,7 @@ input[type="search"]:hover::placeholder {
     margin-bottom: 20px;
 }
 
-.product-list .product-item:nth-child(6) {
+.product-list .product-item:nth-child(6n) {
     margin-right: 0;
 }
 
