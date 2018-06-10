@@ -15,61 +15,67 @@
       <a class="header-logo">
         <span class="main-logo">Device</span>
       </a>
-      <ul class="user-navigation">
-        <li>
+      <div class="user-wrapper">
+        <div class="user-search">
           <form action="https://echo.htmlacademy.ru/" method="post" class="user-form">
             <input name="search" placeholder="Поиск по сайту" type="search">
             <button type="submit" class="user-btn">Найти</button>
           </form>
-        </li>
-        <li>
-          <a href="info.html" class="user-navigation-entrance">Войти</a>
-        </li>
-        <li>
-          <a href="compare.html" class="user-navigation-item">Сравнить</a>
-        </li>
-        <li>
-          <a href="basket.html" class="user-navigation-item">Корзина</a>
-        </li>
-      </ul>
-      <ul class="site-navigation">
-        <li class="navigation-item">
-          <a href="catalog-main.html">Каталог товаров</a>
-          <ul class="sub-menu">
-            <li>
-              <a href="virtuality.html">Виртуальная реальность</a>
-            </li>
-            <li>
-              <a href="catalog.html">Моноподы для селфи</a>
-            </li>
-            <li>
-              <a href="action.html">Экшн-камеры</a>
-            </li>
-          </ul>
-          <ul class="sub-menu">
-            <li>
-              <a href="bracelet.html">Фитнес-браслеты</a>
-            </li>
-            <li>
-              <a href="clock.html">Умные часы</a>
-            </li>
-          </ul>
-          <ul class="sub-menu">
-            <li>
-              <a href="quadrupter.html">Квадрокоптеры</a>
-            </li>
-          </ul>
-        </li>
-        <li class="navigation-item">
-          <a href="delivery.html">Доставка</a>
-        </li>
-        <li class="navigation-item">
-          <a href="guarantee.html">Гарантия</a>
-        </li>
-        <li class="navigation-item">
-          <a href="contact.html">Контакты</a>
-        </li>
-      </ul>
+        </div>
+        <ul class="user-navigation">
+          <li class="user-navigation-entrance">
+            <a href="info.html">Войти</a>
+          </li>
+          <li class="user-navigation-comparison">
+            <a href="compare.html">Сравнить</a>
+          </li>
+          <li class="user-navigation-basket">
+            <a href="basket.html">Корзина</a>
+          </li>
+        </ul>
+      </div>
+      <div class="site-navigation-wrapper">
+        <ul class="site-navigation site-navigation-catalog">
+          <li class="navigation-item navigation-catalog">
+            <a href="catalog-main.html">Каталог товаров</a>
+            <ul class="sub-menu sub-menu-1">
+              <li>
+                <a href="virtuality.html">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a href="catalog.html">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a href="action.html">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="sub-menu sub-menu-2">
+              <li>
+                <a href="bracelet.html">Фитнес-браслеты</a>
+              </li>
+              <li>
+                <a href="clock.html">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="sub-menu sub-menu-3">
+              <li>
+                <a href="quadrupter.html">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="site-navigation site-navigation-list">
+          <li class="navigation-item navigation-delivery">
+            <a href="delivery.html">Доставка</a>
+          </li>
+          <li class="navigation-item navigation-guarantee">
+            <a href="guarantee.html">Гарантия</a>
+          </li>
+          <li class="navigation-item navigation-contact">
+            <a href="contact.html">Контакты</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div class="slider">
       <input type="radio" id="btn-1" name="toggle" checked class="visually-hidden">
@@ -129,7 +135,7 @@
           <div class="slide-img quadrupter-img">
             <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
           </div>
-          <div class="slide-text">
+          <div class="slide-text slide-text-3">
             <b class="slide-title">Порхает как бабочка, жалит как пчела!</b>
             <span class="number">03</span>
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
