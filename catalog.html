@@ -8,69 +8,79 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="container">
-    <nav class="main-navigation">
-      <a href="index.html" class="header-logo">
-        <span class="main-logo">Device</span>
-      </a>
-      <div class="user-search">
-        <form action="https://echo.htmlacademy.ru/" method="post" class="user-form">
-          <input name="search" placeholder="Поиск по сайту" type="search">
-            <button type="submit" class="user-btn">Найти</button>
-        </form>
-      </div>
-      <ul class="user-navigation user-authorized">
-        <li>
-          <a href="info.html">Валентин Петухов</a>
-        </li>
-        <li>
-          <a href="info.html" class="exit">Выйти</a>
-        </li>
-        <li>
-          <a href="compare.html">Сравнить</a>
-        </li>
-        <li>
-          <a href="basket.html">Корзина</a>
-        </li>
-      </ul>
-      <ul class="site-navigation">
-        <li class="navigation-item">
-          <a href="catalog.html">Каталог товаров</a>
-          <ul class="sub-menu">
-            <li>
-              <a href="virtuality.html">Виртуальная реальность</a>
+  <header class="main-header">
+    <div class="container">
+      <nav class="main-navigation main-navigation-catalog">
+        <h2 class="visually-hidden">Главное меню</h2>
+        <a href="index.html" class="header-logo main-logo">Device</a>
+        <div class="user-wrapper">
+          <div class="user-search">
+            <form action="https://echo.htmlacademy.ru/" method="post" class="user-form">
+              <input name="search" placeholder="Поиск по сайту" type="search">
+              <button type="submit" class="user-btn">Найти</button>
+            </form>
+          </div>
+          <ul class="user-navigation">
+            <li class="user-navigation-entrance">
+              <a href="info.html">Валентин Петухов</a>
             </li>
-            <li>
-              <a href="monopod.html">Моноподы для селфи</a>
+            <li class="user-exit">
+              <a href="info.html">Выйти</a>
             </li>
-            <li>
-              <a href="action.html">Экшн-камеры</a>
+            <li class="user-navigation-comparison">
+              <a href="compare.html">Сравнить</a>
+            </li>
+            <li class="user-navigation-basket">
+              <a href="basket.html">Корзина</a>
             </li>
           </ul>
-          <ul class="sub-menu">
-            <li>
-              <a href="bracelet.html">Фитнес-браслеты</a>
-            </li>
-            <li>
-              <a href="clock.html">Умные часы</a>
+        </div>
+        <div class="site-navigation-wrapper">
+          <ul class="site-navigation site-navigation-catalog">
+            <li class="navigation-item navigation-catalog">
+              <a href="catalog-main.html">Каталог товаров</a>
+              <div class="sub-menu-wrapper">
+                <ul class="sub-menu sub-menu-1">
+                  <li>
+                    <a href="virtuality.html">Виртуальная реальность</a>
+                  </li>
+                  <li>
+                    <a href="catalog.html">Моноподы для селфи</a>
+                  </li>
+                  <li>
+                    <a href="action.html">Экшн-камеры</a>
+                  </li>
+                </ul>
+                <ul class="sub-menu sub-menu-2">
+                  <li>
+                    <a href="bracelet.html">Фитнес-браслеты</a>
+                  </li>
+                  <li>
+                    <a href="clock.html">Умные часы</a>
+                  </li>
+                </ul>
+                <ul class="sub-menu sub-menu-3">
+                  <li>
+                    <a href="quadrupter.html">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
-          <ul class="sub-menu">
-            <li>
-              <a href="quadrupter.html">Квадрокоптеры</a>
+          <ul class="site-navigation site-navigation-list">
+            <li class="navigation-item navigation-delivery">
+              <a href="delivery.html">Доставка</a>
+            </li>
+            <li class="navigation-item navigation-guarantee">
+              <a href="guarantee.html">Гарантия</a>
+            </li>
+            <li class="navigation-item navigation-contact">
+              <a href="contact.html">Контакты</a>
             </li>
           </ul>
-        </li>
-        <li class="navigation-item">
-          <a href="delivery.html">Доставка</a>
-        </li>
-        <li class="navigation-item">
-          <a href="guarantee.html">Гарантия</a>
-        </li>
-        <li class="navigation-item">
-          <a href="contact.html">Контакты</a>
-        </li>
-      </ul>
+        </div>
+      </nav>
+    </div>
     </nav>
   </header>
   <main>
@@ -92,7 +102,7 @@
             <div class="sorting-caption">
               <h2 class="caption">Сортировка:</h2>
               <ul class="sorting-list">
-                <li class="sorting-item">
+                <li class="sorting-item sorting-corrent">
                   <a href="#">По цене</a>
                 </li>
                 <li class="sorting-item">
@@ -101,11 +111,17 @@
                 <li class="sorting-item">
                   <a href="#">По популярности</a>
                 </li>
+              </ul>
+              <ul class="sorting-arrow">
                 <li class="arrow arrow-up">
-                  <a href="#" aria-label="Кнопка сортировки вверх"></a>
+                  <a href="#" aria-label="Кнопка сортировки вверх">
+                    <img src="img/icon-up-dir.svg" alt="Кнопка сортировки вверх">
+                  </a>
                 </li>
-                <li class="arrow arrow-down">
-                  <a href="#" aria-label="Кнопка сортировки вниз"></a>
+                <li class="arrow arrow-down arrow-current">
+                  <a class="" href="#" aria-label="Кнопка сортировки вниз">
+                    <img src="img/icon-down-dir.svg" alt="Кнопка сортировки вниз">
+                  </a>
                 </li>
               </ul>
             </div>
@@ -231,52 +247,61 @@
       </div>
     </div>
   </main>
-    <footer class="main-footer">
-      <div class="main-footer-wrapper container">
-        <div class="footer-top">
-          <span class="main-logo footer-logo">Device</span>
-          <ul class="footer-navigation">
-            <li class="navigation-title">
-              <a href="info.html">Войти</a>
-            </li>
-            <li class="navigation-title">
-              <a href="compare.html">Сравнить</a>
-            </li>
-            <li class="navigation-title">
-              <a href="basket.html">Корзина</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-middle">
-          <p>г.Москва, ул. Строителей, 15</p>
-          <ul class="footer-service">
-            <li class="service-title">
-              <a href="">Доставка</a>
-            </li>
-            <li class="service-title">
-              <a href="">Гарантии</a>
-            </li>
-            <li class="service-title">
-              <a href="">Контакты</a>
-            </li>
-          </ul>
-          <p>Тел.:<a href="tel:88008008080" class="user-phone">+7(495)495-95-95</a></p>
-        </div>
-        <div class="footer-bottom">
-          <ul class="social-icon">
-            <li class="social-item">
-              <a href="https://www.facebook.com" aria-label="Фейсбук" target="_blank" rel="noopener"></a>
-            </li>
-            <li class="social-item">
-              <a href="https://www.instagram.com" aria-label="Инстаграм" target="_blank" rel="noopener"></a>
-            </li>
-            <li class="social-item">
-              <a href="https://twitter.com" aria-label="Твиттер" target="_blank" rel="noopener"></a>
-            </li>
-          </ul>
-          <a href="https://up.htmlacademy.ru" class="htmlacademy" aria-label="Html Academy" target="_blank" rel="noopener"></a>
-        </div>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="main-logo footer-logo">Device</a>
+        <ul class="footer-navigation">
+          <li class="navigation-title navigation-entrance">
+            <a href="info.html">Войти</a>
+          </li>
+          <li class="navigation-title navigation-compare">
+            <a href="compare.html">Сравнить</a>
+          </li>
+          <li class="navigation-title navigation-basket">
+            <a href="basket.html">Корзина</a>
+          </li>
+        </ul>
       </div>
-    </footer>
+      <div class="footer-middle">
+        <p>г.Москва, ул. Строителей, 15</p>
+        <ul class="footer-service">
+          <li class="service-title">
+            <a href="">Доставка</a>
+          </li>
+          <li class="service-title">
+            <a href="">Гарантия</a>
+          </li>
+          <li class="service-title">
+            <a href="">Контакты</a>
+          </li>
+        </ul>
+        <p>Тел.: <a href="tel:84954959595" class="user-phone">+7 (495) 495-95-95</a></p>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-icon"></span>
+        <ul class="social-icon">
+          <li class="social-item social-facebook">
+            <a href="https://www.facebook.com" aria-label="Фейсбук" target="_blank" rel="noopener">
+              <img src="img/fb.svg" alt="Фейсбук">
+            </a>
+          </li>
+          <li class="social-item social-instagram">
+            <a href="https://www.instagram.com" aria-label="Инстаграм" target="_blank" rel="noopener">
+              <img src="img/instagram.svg" alt="Инстаграм">
+            </a>
+          </li>
+          <li class="social-item social-twitter">
+            <a href="https://twitter.com" aria-label="Твиттер" target="_blank" rel="noopener">
+              <img src="img/twitter.svg" alt="Твиттер">
+            </a>
+          </li>
+        </ul>
+        <a href="https://up.htmlacademy.ru" class="htmlacademy" aria-label="Html Academy" target="_blank" rel="noopener">
+          <img src="img/logo-html.svg" alt="htmlacademy">
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
