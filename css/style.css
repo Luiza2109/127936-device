@@ -155,7 +155,7 @@ a {
     width: 1040px;
     margin: 0 auto;
 
-    margin-bottom: 21px;
+    margin-bottom: 23px;
     padding-top: 28px;
 }
 
@@ -240,6 +240,8 @@ a {
     background-image: url("../img/user.svg");
     background-repeat: no-repeat;
     background-position: 5px 50%;
+
+    letter-spacing: 0.2px;
 }
 
 .user-navigation-comparison a {
@@ -285,7 +287,7 @@ a {
 }
 
 .navigation-catalog::after {
-  transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 /*Выпадающее меню*/
@@ -373,27 +375,31 @@ a {
     position: relative;
 }
 
-.user-search input {
+.user-search input[type="search"] {
+    position: relative;
+
     line-height: 36px;
     background-color: #f7e296;
     color: rgba(0, 0, 0, 0.3);
-    border: none;
+    border: 2px solid transparent;
     outline: none;
 
     width: 355px;
+    min-height: 32px;
     padding: 10px 40px;
     margin-right: 90px;
+
     box-sizing: border-box;
 
     background-image: url("../img/search.svg");
     background-repeat: no-repeat;
-    background-position: 0 50%;
+    background-position: 2px center;
 }
 
 .user-search .user-btn {
     position: absolute;
     bottom: 0;
-    right: 1px;
+    right: 2px;
     line-height: 36px;
     padding: 5px 20px;
     color: #000000;
@@ -427,8 +433,10 @@ a {
 
 .user-form input[type="search"]:focus {
     color: #000000;
+    border-right: none;
+    border-left: none;
+    margin-left: 2px;
     border-bottom: 2px solid #000000;
-    margin-top: -2px;
 }
 
 .user-form input[type="search"]:focus + .user-btn {
@@ -589,7 +597,7 @@ a {
 
 .slides .us-btn {
     width: 220px;
-    margin-bottom: 44px;
+    margin-bottom: 45px;
 }
 
 .slides .us-btn:nth-child(3) {
@@ -609,8 +617,7 @@ a {
 
 .description-slide th {
     font-size: 13px;
-    font-weight: 300;
-    line-height: 20px;
+    font-weight: 300;    line-height: 20px;
     text-align: left;
     padding-right: 80px;
 }
@@ -627,6 +634,9 @@ a {
     font-family: "Gilroy", "Verdana", sans-serif;
     font-size: 36px;
     font-weight: 300;
+
+    margin: 0;
+    padding: 0;
 
     padding-bottom: 15px;
 }
@@ -1523,33 +1533,7 @@ a {
 
 .filter {
     width: 328px;
-    padding-top: 78px;
     position: relative;
-}
-
-.filter::after,
-.filter-color::after,
-.filter-bluetooth::after {
-    content: "";
-    position: absolute;
-    width: 202px;
-    height: 2px;
-    border-bottom: 2px solid black;
-}
-
-.filter::after {
-    top: 67px;
-    left: 58px;
-}
-
-.filter-color::after {
-    top: 21px;
-    left: 57px;
-}
-
-.filter-bluetooth::after {
-    top: 492px;
-    left: 59px;
 }
 
 .filter legend {
@@ -1558,6 +1542,46 @@ a {
     font-size: 18px;
     color: #000000;
     letter-spacing: 0.2px;
+
+    position: relative;
+}
+
+.filter .price::before,
+.filter .color::before,
+.filter .bluetooth::before {
+    content: "";
+    width: 202px;
+
+    position: absolute;
+
+    border-top: 2px solid black;
+}
+
+.filter .price::before {
+    bottom: 42px;
+}
+
+.filter .color::before,
+.filter .bluetooth::before {
+    bottom: 52px;
+}
+
+.price {
+    padding-top: 77px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+}
+
+.color {
+    padding-top: 41px;
+    padding-bottom: 16px;
+    padding-left: 2px;
+}
+
+.bluetooth {
+    padding-top: 41px;
+    padding-bottom: 14px;
+    padding-left: 2px;
 }
 
 .range-filter {
@@ -1595,16 +1619,16 @@ a {
     box-shadow: 0 2px 1px 0 #cfcfcf;
 }
 
-.range-controls .toggle:active {
-    transform: scale(1.1);
-}
-
 .range-controls .toggle-min {
     left: 0;
 }
 
 .range-controls .toggle-max {
     left: 113px;
+}
+
+.range-controls .toggle:active {
+    transform: scale(1.1);
 }
 
 .price-controls input,
@@ -1626,7 +1650,6 @@ a {
 
 .filter ul {
     list-style: none;
-    line-height: 14px;
     line-height: 40px;
 
     margin: 0;
@@ -1634,27 +1657,20 @@ a {
 }
 
 .filter fieldset {
+    margin: 0;
+    padding: 0;
     padding-left: 56px;
-    padding-top: 6px;
     border: none;
-}
-
-.filter-color {
-    position: relative;
-}
-
-.filter-color legend {
-    padding-top: 32px;
-    padding-bottom: 8px;
-}
-
-.filter-option input {
-    box-sizing: border-box;
 }
 
 .filter-color:disabled + label {
     color: #000000;
     opacity: 0.5;
+}
+
+.filter-option,
+.filter-radio {
+    height: 40px;
 }
 
 .filter-option label,
@@ -1663,24 +1679,16 @@ a {
     cursor: pointer;
 
     font-size: 14px;
-    line-height: 40px;
     color: #000000;
-}
 
-.filter-option label {
-    margin-left: 40px;
-    padding-top: 0px;
-}
-
-.filter-radio label {
-    margin-left: 41px;
+    margin-left: 42px;
 }
 
 .filter-option input[type="checkbox"] + label::before,
 .filter-radio input[type="radio"] + label::before {
     content: "";
     position: absolute;
-    top: -2px;
+    top: -3px;
     left: -40px;
     width: 25px;
     height: 25px;
@@ -1705,11 +1713,6 @@ a {
                 url("../img/checkbox-on.svg") 0 0 no-repeat;
 }
 
-.filter-option input[type="checkbox"]:checked ~ label::before {
-    background: url("../img/checkbox-off.svg") 0 0 no-repeat,
-                url("../img/checkbox-on.svg") 0 0 no-repeat;
-}
-
 .filter-radio input[type="radio"]:checked ~ label::before {
     background: url("../img/radio-off.svg") 0 0 no-repeat,
                 url("../img/radio-on.svg") 0 0 no-repeat;
@@ -1717,18 +1720,12 @@ a {
 
 .filter-option input[type="checkbox"] + label:hover::before,
 .filter-option input[type="checkbox"]:focus + label::before,
-.filter-radio input[type="radio"] + label:hover::before,
-.filter-radio input[type="radio"]:focus + label {
+.filter-radio input[type="radio"] + label:hover::before {
     opacity: 0.6;
 }
 
-.filter-bluetooth legend {
-    padding-top: 32px;
-    padding-bottom: 7px;
-}
-
 .filter-bluetooth .buetooth-item {
-    margin-bottom: 33px;
+    margin-bottom: 31px;
 }
 
 .filter-button {
@@ -1860,7 +1857,11 @@ a {
     letter-spacing: 0.2px;
     line-height: 22px;
 
-    padding-top: 7px;
+    margin: 0;
+    padding: 0;
+
+    padding-top: 23px;
+    padding-bottom: 20px;
     width: 260px;
 }
 
@@ -1935,8 +1936,8 @@ a {
     color: #000000;
 }
 
-.prev,
-.next {
+.backward,
+.forward {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -1977,8 +1978,6 @@ a {
 
     position: fixed;
     z-index: 4000;
-
-    color: #000000;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
@@ -2031,7 +2030,6 @@ a {
     color: #000000;
 }
 
-.login-form p,
 .login-form p {
     display: inline-block;
     margin-right: 35px;
