@@ -428,6 +428,7 @@ a {
 .user-form input[type="search"]:focus {
     color: #000000;
     border-bottom: 2px solid #000000;
+    margin-top: -2px;
 }
 
 .user-form input[type="search"]:focus + .user-btn {
