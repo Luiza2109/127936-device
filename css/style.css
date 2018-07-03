@@ -1110,6 +1110,15 @@ a {
     list-style: none;
 }
 
+.footer-user-exit {
+    margin: 0;
+}
+
+.footer-user-exit a {
+    padding: 0;
+    padding-left: 25px;
+}
+
 .navigation-title {
     position: relative;
     padding-left: 65px;
