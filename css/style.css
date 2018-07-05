@@ -888,9 +888,9 @@ a {
     display: none;
 }
 
-#tab-1:checked ~ .tabs .tab-slide:nth-child(1),
-#tab-2:checked ~ .tabs .tab-slide:nth-child(2),
-#tab-3:checked ~ .tabs .tab-slide:nth-child(3) {
+.tab-1:checked ~ .tabs .tab-slide:nth-child(1),
+.tab-2:checked ~ .tabs .tab-slide:nth-child(2),
+.tab-3:checked ~ .tabs .tab-slide:nth-child(3) {
     display: block;
 }
 
