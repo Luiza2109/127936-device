@@ -665,17 +665,17 @@ a {
     display: none;
 }
 
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+.slide-btn-1:checked ~ .slider-controls label[for="btn-1"],
+.slide-btn-2:checked ~ .slider-controls label[for="btn-2"],
+.slide-btn-3:checked ~ .slider-controls label[for="btn-3"] {
     background-image: url("../img/slider-button1.svg");
     background-repeat: no-repeat;
     background-size: 12px 12px;
 }
 
-#btn-1:checked ~ .slides .slide:nth-child(1),
-#btn-2:checked ~ .slides .slide:nth-child(2),
-#btn-3:checked ~ .slides .slide:nth-child(3) {
+.slide-btn-1:checked ~ .slides .slide:nth-child(1),
+.slide-btn-2:checked ~ .slides .slide:nth-child(2),
+.slide-btn-3:checked ~ .slides .slide:nth-child(3) {
     display: block;
 }
 
