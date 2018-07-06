@@ -500,8 +500,8 @@ a {
     content: "";
 
     position: absolute;
-    top: 35px;
-    right: 489px;
+    top: 36px;
+    right: 450px;
 
     width: 100px;
     height: 7px;
@@ -516,19 +516,19 @@ a {
 
 .img-wrapper-1 {
     width: 510px;
-    padding-left: 60px;
+    padding-left: 80px;
 }
 
 .img-wrapper-2 {
     width: 484px;
     margin-top: 10px;
-    padding-left: 85px;
+    padding-left: 105px;
 }
 
 .img-wrapper-3 {
     width: 530px;
     margin-top: 65px;
-    padding-left: 1px;
+    padding-left: 20px;
 }
 
 .slide-wrapper-3 {
