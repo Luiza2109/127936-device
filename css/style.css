@@ -1781,8 +1781,8 @@ a {
 .img-new::after {
     content: "New";
     position: absolute;
-    bottom: 297px;
-    right: 26px;
+    top: 53px;
+    right: 25px;
 
     padding: 12px;
 
