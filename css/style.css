@@ -81,6 +81,7 @@ a {
     text-transform: uppercase;
 
     color: #000000;
+    background-color: transparent;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(42%, transparent), color-stop(42%, #f0c52e), color-stop(58%, #f0c52e), color-stop(58%, transparent));
     background-image: -webkit-linear-gradient(transparent 42%, #f0c52e 42%, #f0c52e 58%, transparent 58%);
     background-image: -o-linear-gradient(transparent 42%, #f0c52e 42%, #f0c52e 58%, transparent 58%);
@@ -1808,6 +1809,7 @@ a {
 
     display: none;
     width: 200px;
+    border: none;
 
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(42%, transparent), color-stop(42%, #f0c52e), color-stop(58%, #f0c52e), color-stop(58%, transparent));
 
@@ -1821,11 +1823,15 @@ a {
 .catalog-item .catalog-link {
     position: absolute;
     top: 230px;
-    left: 100px;
+    left: 90px;
 
     display: none;
+    border: none;
 
     color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    outline: none;
+
 }
 
 .catalog-item:hover img,
