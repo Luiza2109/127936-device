@@ -2,10 +2,10 @@
     font-family: "Gilroy";
     src: url("../fonts/Gilroy-Light.eot");
     src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/Gilroy-Light.woff2") format("woff2"),
-        url("../fonts/Gilroy-Light.woff") format("woff"),
-        url("../fonts/Gilroy-Light.ttf") format("truetype"),
-        url("../fonts/Gilroy-Light.svg#Gilroy-Light") format("svg");
+    url("../fonts/Gilroy-Light.woff2") format("woff2"),
+    url("../fonts/Gilroy-Light.woff") format("woff"),
+    url("../fonts/Gilroy-Light.ttf") format("truetype"),
+    url("../fonts/Gilroy-Light.svg#Gilroy-Light") format("svg");
     font-weight: 300;
     font-style: normal;
 }
@@ -14,10 +14,10 @@
     font-family: "Gilroy";
     src: url("../fonts/Gilroy-ExtraBold.eot");
     src: url("../fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"),
-        url("../fonts/Gilroy-ExtraBold.woff") format("woff"),
-        url("../fonts/Gilroy-ExtraBold.ttf") format("truetype"),
-        url("../fonts/Gilroy-ExtraBold.svg#Gilroy-ExtraBold") format("svg");
+    url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Gilroy-ExtraBold.woff") format("woff"),
+    url("../fonts/Gilroy-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Gilroy-ExtraBold.svg#Gilroy-ExtraBold") format("svg");
     font-weight: 800;
     font-style: normal;
 }
@@ -307,7 +307,7 @@ a {
 }
 
 .navigation-catalog:hover .sub-menu-wrapper,
-.navigation-catalog:focus .sub-menu-wrapper  {
+.navigation-catalog:focus .sub-menu-wrapper {
     display: block;
 }
 
@@ -860,13 +860,13 @@ a {
     background-position: 675px 45px;
 }
 
-.tab-slide:nth-child(2){
+.tab-slide:nth-child(2) {
     background-image: url("../img/warranty.svg");
     background-repeat: no-repeat;
     background-position: 660px 20px;
 }
 
-.tab-slide:nth-child(3){
+.tab-slide:nth-child(3) {
     background-image: url("../img/credit.svg");
     background-repeat: no-repeat;
     background-position: 652px 20px;
@@ -1322,7 +1322,6 @@ a {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
-    width: 1120px;
     padding: 0 57px;
     margin: 0;
     margin-bottom: 40px;
@@ -1610,7 +1609,7 @@ a {
     border-radius: 50%;
     background-color: #ababab;
     -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
-            box-shadow: 0 2px 1px 0 #cfcfcf;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
 }
 
 .range-controls .toggle-min {
@@ -1711,12 +1710,12 @@ a {
     width: 26px;
     height: 26px;
     background: url("../img/checkbox-off.svg") 0 0 no-repeat,
-                url("../img/checkbox-on.svg") 0 0 no-repeat;
+    url("../img/checkbox-on.svg") 0 0 no-repeat;
 }
 
 .filter-radio input[type="radio"]:checked ~ label::before {
     background: url("../img/radio-off.svg") 0 0 no-repeat,
-                url("../img/radio-on.svg") 0 0 no-repeat;
+    url("../img/radio-on.svg") 0 0 no-repeat;
 }
 
 .filter-option input[type="checkbox"] + label:hover::before,
@@ -1878,6 +1877,10 @@ a {
     color: #000000;
 }
 
+.catalog-text h3 > a {
+    color: #000000;
+}
+
 .catalog-item span {
     padding-top: 21px;
     margin-left: auto;
@@ -1930,6 +1933,8 @@ a {
     font-size: 16px;
     letter-spacing: 3.5px;
     text-transform: uppercase;
+    height: 70px;
+    line-height: 70px;
 
     color: rgba(0, 0, 0, 0.3);
 }
@@ -1981,96 +1986,97 @@ a {
 
 /* Всплывающая форма */
 @-webkit-keyframes bounce {
-  0% {
-      -webkit-transform: translateY(-2000px);
-      transform: translateY(-2000px);
-  }
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px);
+    }
 
-  70% {
-      -webkit-transform: translateY(30px);
-      transform: translateY(30px);
-  }
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
 
-  90% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-  }
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
 
-  100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-  }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
+
 @keyframes bounce {
-  0% {
-      -webkit-transform: translateY(-2000px);
-      transform: translateY(-2000px);
-  }
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px);
+    }
 
-  70% {
-      -webkit-transform: translateY(30px);
-      transform: translateY(30px);
-  }
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px);
+    }
 
-  90% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-  }
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
 
-  100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-  }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
 
 @-webkit-keyframes shake {
-  0%,
-  100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-  }
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-      -webkit-transform: translateX(-10px);
-      transform: translateX(-10px);
-  }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
 
-  20%,
-  40%,
-  60%,
-  80% {
-      -webkit-transform: translateX(10px);
-      transform: translateX(10px);
-  }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
 }
 
 @keyframes shake {
-  0%,
-  100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-  }
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-      -webkit-transform: translateX(-10px);
-      transform: translateX(-10px);
-  }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
 
-  20%,
-  40%,
-  60%,
-  80% {
-      -webkit-transform: translateX(10px);
-      transform: translateX(10px);
-  }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
 }
 
 .modal {
