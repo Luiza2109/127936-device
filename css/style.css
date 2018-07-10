@@ -623,8 +623,8 @@ a {
 
 .slider-controls {
     position: absolute;
-    bottom: 185px;
-    right: 14px;
+    bottom: 190px;
+    right: 12px;
     z-index: 2000;
 
     min-width: 200px;
@@ -672,7 +672,7 @@ a {
 
 /*product*/
 .product {
-    margin-bottom: 82px;
+    margin-bottom: 78px;
 }
 
 .product-list {
@@ -767,13 +767,13 @@ a {
 /*tabs*/
 
 .service {
-    height: 388px;
+    min-height: 389px;
     margin-bottom: 92px;
 
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(26%, #ffffff), color-stop(26%, #e5e5e5), color-stop(74%, #e5e5e5));
-    background-image: -webkit-linear-gradient(top, #ffffff 26%, #e5e5e5 26%, #e5e5e5 74%);
-    background-image: -o-linear-gradient(top, #ffffff 26%, #e5e5e5 26%, #e5e5e5 74%);
-    background-image: linear-gradient(to bottom, #ffffff 26%, #e5e5e5 26%, #e5e5e5 74%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(105px, #ffffff), color-stop(105px, #e5e5e5));
+    background-image: -webkit-linear-gradient(top, #ffffff 103px, #e5e5e5 103px);
+    background-image: -o-linear-gradient(top, #ffffff 103px, #e5e5e5 103px);
+    background-image: linear-gradient(to bottom, #ffffff 103px, #e5e5e5 103px);
 }
 
 .tab {
@@ -784,17 +784,17 @@ a {
 .tab-controls::after {
     content: "";
     position: absolute;
-    top: -79px;
+    top: -76px;
     right: 0;
 
-    height: 307px;
+    min-height: 310px;
 
     border: 4px solid #000000;
 }
 
 .tab-controls {
     position: absolute;
-    top: 79px;
+    top: 84px;
     left: 0;
 }
 
@@ -811,16 +811,17 @@ a {
 }
 
 .tabs {
-    position: absolute;
-    top: 40px;
-    right: 0;
+    display: inline-block;
+    min-height: 350px;
+    padding-left: 283px;
+    padding-top: 42px;
 
     width: 877px;
 }
 
 .tab-text {
     padding-left: 118px;
-    min-height: 300px;
+    min-height: 250px;
     width: 440px;
 }
 
@@ -1480,22 +1481,19 @@ a {
     list-style: none;
 }
 
-.sorting-arrow .arrow {
+.sorting-arrow .img-arrow {
     padding-left: 19px;
     opacity: 0.2;
 }
 
-.sorting-arrow .arrow:hover,
-.sorting-arrow .arrow a:focus {
+.sorting-arrow .img-arrow:hover,
+.sorting-arrow .img-arrow a:focus {
     opacity: 0.4;
     outline: none;
 }
 
-.sorting-arrow .arrow:active {
-    opacity: 1;
-}
-
-.sorting-arrow .arrow-current {
+.sorting-arrow .arrow-current,
+.sorting-arrow .img-arrow:active {
     opacity: 1;
 }
 
@@ -1653,11 +1651,6 @@ a {
     border: none;
 }
 
-.filter-color:disabled + label {
-    color: #000000;
-    opacity: 0.5;
-}
-
 .filter-option,
 .filter-radio {
     height: 40px;
@@ -1701,13 +1694,11 @@ a {
     position: absolute;
     width: 26px;
     height: 26px;
-    background: url("../img/checkbox-off.svg") 0 0 no-repeat,
-    url("../img/checkbox-on.svg") 0 0 no-repeat;
+    background: url("../img/checkbox-on.svg") 0 0 no-repeat;
 }
 
 .filter-radio input[type="radio"]:checked ~ label::before {
-    background: url("../img/radio-off.svg") 0 0 no-repeat,
-    url("../img/radio-on.svg") 0 0 no-repeat;
+    background: url("../img/radio-on.svg") 0 0 no-repeat;
 }
 
 .filter-option input[type="checkbox"] + label:hover::before,
@@ -1715,6 +1706,20 @@ a {
 .filter-radio input[type="radio"] + label:hover::before,
 .filter-radio input[type="radio"]:focus + label::before {
     opacity: 0.6;
+}
+
+.filter-option input[type="checkbox"]:active ~ label::before,
+.filter-radio input[type="radio"]:active + label::before {
+    opacity: 1;
+}
+
+.filter-color:disabled + label {
+    color: #a6a6a6;
+}
+
+.filter-option input[type="checkbox"]:disabled ~ label::before,
+.filter-radio input[type="radio"]:disabled + label::before {
+    opacity: 0.25;
 }
 
 .filter-bluetooth .buetooth-item {
@@ -2113,6 +2118,10 @@ a {
     margin-left: -430px;
 
     background-color: #ffffff;
+}
+
+.modal-login input[type="text"] {
+    text-transform: capitalize;
 }
 
 .modal-login textarea {

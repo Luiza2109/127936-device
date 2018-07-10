@@ -5,7 +5,7 @@
   <title>Device</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="main-header">
@@ -114,12 +114,12 @@
               <ul class="sorting-arrow">
                 <li class="arrow arrow-up">
                   <a href="#" aria-label="Кнопка сортировки вверх">
-                    <img src="img/icon-up-dir.svg" width="11" height="10" alt="Кнопка сортировки вверх">
+                    <img src="img/icon-up-dir.svg" width="11" height="10" alt="Кнопка сортировки вверх" class="img-arrow">
                   </a>
                 </li>
-                <li class="arrow arrow-down arrow-current">
+                <li class="arrow arrow-down">
                   <a href="#" aria-label="Кнопка сортировки вниз">
-                    <img src="img/icon-down-dir.svg" width="11" height="10" alt="Кнопка сортировки вниз">
+                    <img src="img/icon-down-dir.svg" width="11" height="10" alt="Кнопка сортировки вниз" class="img-arrow arrow-current">
                   </a>
                 </li>
               </ul>
@@ -179,11 +179,11 @@
                 <legend class="bluetooth">Bluetooth</legend>
                 <ul class="buetooth-item">
                   <li class="filter-radio">
-                    <input class="visually-hidden filter-color" type="radio" name="bluetooth" value="yes" id="filter-yes">
+                    <input class="visually-hidden filter-color" type="radio" name="bluetooth" value="yes" id="filter-yes" checked>
                     <label for="filter-yes">Есть</label>
                   </li>
                   <li class="filter-radio">
-                    <input class="visually-hidden filter-color" type="radio" name="bluetooth" value="no" id="filter-no" checked>
+                    <input class="visually-hidden filter-color" type="radio" name="bluetooth" value="no" id="filter-no">
                     <label for="filter-no">Нет</label>
                   </li>
                 </ul>

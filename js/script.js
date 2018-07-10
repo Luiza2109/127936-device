@@ -46,17 +46,17 @@ window.addEventListener("keydown", function (evt) {
         popup.classList.remove("modal-error");
       }
     }
-  });
+});
 
 mapLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.add("modal-show");
-  });
+});
 
-  mapClose.addEventListener("click", function (evt) {
+mapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.remove("modal-show");
-  });
+});
 
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -64,4 +64,4 @@ mapLink.addEventListener("click", function (evt) {
         mapPopup.classList.remove("modal-show");
       }
     }
-  });
+});
